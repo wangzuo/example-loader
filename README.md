@@ -1,34 +1,52 @@
 # example-loader
 
+webpack loader for react-example
+
+### Installation
+``` sh
+npm install example-loader -D
+```
+
+### Usage
+``` javascript
+// webpack.config.js
+module: {
+  loaders: [
+    { test: /\.js$/, loader:  'babel-loader' },
+    { test: /\.example$/, loader:  'babel-loader!../lib/loader' }
+  ]
+},
+example: {
+  'Button': './button'
+}
+```
+
+
 button.example
 ``` html
-<div className="example-buttons">
-  <Button color="blue">blue</Button>
-  <Button color="red">red</Button>
-  <Button color="yellow">yellow</Button>
-</div>
+<Button color="blue">blue</Button>
+<Button color="red">red</Button>
+<Button color="yellow">yellow</Button>
 ```
 
 require('./button.example')
 ``` javascript
+import Button from './button';
+
 module.exports = React.createClass({
   render() {
     return (
       <div className="example">
-        <div className="example-buttons">
-          <Button color="blue">blue</Button>
-          <Button color="red">red</Button>
-          <Button color="yellow">yellow</Button>
-        </div>
+        <Button color="blue">blue</Button>
+        <Button color="red">red</Button>
+        <Button color="yellow">yellow</Button>
 
         <pre>
           <code>
-            {`<div className="example-buttons">
-              <Button color="blue">blue</Button>
+            {`<Button color="blue">blue</Button>
               <Button color="red">red</Button>
               <Button color="yellow">yellow</Button>
-            </div>
-            `}
+            </div>`}
           </code>
         </pre>
       </div>
@@ -36,3 +54,6 @@ module.exports = React.createClass({
   }
 });
 ```
+
+### License
+ISC

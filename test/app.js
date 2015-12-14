@@ -1,3 +1,6 @@
-// var Button = require('./button');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Button = require('./button');
 var Example = require('./button.example');
-console.log('hello world');
+
+ReactDOM.render(<Example/>, document.getElementById('app'));

@@ -1,7 +1,15 @@
 module.exports = React.createClass({
   displayName: 'Button',
 
+  getDefaultProps() {
+    return {
+      color: 'gray'
+    };
+  },
+
   render() {
-    return (<button>{this.props.children}</button>);
+    return (
+      <button className={`btn-${this.props.color}`}>{this.props.children}</button>
+    );
   }
 });

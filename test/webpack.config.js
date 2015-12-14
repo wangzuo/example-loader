@@ -6,7 +6,15 @@ module.exports = {
   },
   module: {
     loaders: [
+      { test: /\.js$/, loader:  'babel-loader' },
       { test: /\.example$/, loader:  'babel-loader!../lib/loader' }
     ]
+  },
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM'
+  },
+  example: {
+    'Button': './button'
   }
 };
