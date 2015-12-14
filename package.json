@@ -7,7 +7,11 @@
     "test": "test"
   },
   "scripts": {
+    "deploy": "github-pages-deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "github-pages-deploy": {
+    "src": "test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +28,7 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "github-pages-deploy": "0.0.3",
     "webpack": "^1.12.9"
   }
 }
