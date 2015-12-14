@@ -23,7 +23,7 @@ example: {
 
 
 button.example
-``` html
+``` javascript 
 <Button color="blue">blue</Button>
 <Button color="red">red</Button>
 <Button color="yellow">yellow</Button>
