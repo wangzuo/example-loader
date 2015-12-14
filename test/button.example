@@ -1,0 +1,5 @@
+<div className="example-buttons">
+  <Button color="blue">blue</Button>
+  <Button color="red">red</Button>
+  <Button color="yellow">yellow</Button>
+</div>
