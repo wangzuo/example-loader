@@ -23,7 +23,7 @@ example: {
 
 
 button.example
-``` javascript 
+``` javascript
 <Button color="blue">blue</Button>
 <Button color="red">red</Button>
 <Button color="yellow">yellow</Button>
@@ -31,28 +31,29 @@ button.example
 
 require('./button.example')
 ``` javascript
+import React from 'react';
 import Button from './button';
 
-module.exports = React.createClass({
-  render() {
-    return (
-      <div className="example">
-        <Button color="blue">blue</Button>
-        <Button color="red">red</Button>
-        <Button color="yellow">yellow</Button>
+const Example = () => (
+  <div className="example">
+    <Button>gray</Button>
+<Button color="blue">blue</Button>
+<Button color="red">red</Button>
+<Button color="yellow">yellow</Button>
 
-        <pre>
-          <code>
-            {`<Button color="blue">blue</Button>
-              <Button color="red">red</Button>
-              <Button color="yellow">yellow</Button>
-            </div>`}
-          </code>
-        </pre>
-      </div>
-    );
-  }
-});
+    <pre>
+      <code>
+        {`<Button>gray</Button>
+<Button color="blue">blue</Button>
+<Button color="red">red</Button>
+<Button color="yellow">yellow</Button>
+`}
+      </code>
+    </pre>
+  </div>
+);
+
+export default Example
 ```
 
 ### License

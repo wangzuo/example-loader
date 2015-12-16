@@ -1,4 +1,4 @@
-module.exports = React.createClass({
+var Button = React.createClass({
   displayName: 'Button',
 
   getDefaultProps() {
@@ -13,3 +13,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Button
