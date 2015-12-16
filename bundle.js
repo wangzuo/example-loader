@@ -46,12 +46,21 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(2);
-	var Button = __webpack_require__(3);
-	var Example = __webpack_require__(4);
+	var _react = __webpack_require__(1);
 
-	ReactDOM.render(React.createElement(Example, null), document.getElementById('app'));
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _button = __webpack_require__(3);
+
+	var _button2 = _interopRequireDefault(_button);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	_reactDom2.default.render(_react2.default.createElement(_button2.default, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -67,11 +76,72 @@
 
 /***/ },
 /* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _button = __webpack_require__(4);
+
+	var _button2 = _interopRequireDefault(_button);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Example = function Example() {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'example' },
+	    _react2.default.createElement(
+	      _button2.default,
+	      null,
+	      'gray'
+	    ),
+	    _react2.default.createElement(
+	      _button2.default,
+	      { color: 'blue' },
+	      'blue'
+	    ),
+	    _react2.default.createElement(
+	      _button2.default,
+	      { color: 'red' },
+	      'red'
+	    ),
+	    _react2.default.createElement(
+	      _button2.default,
+	      { color: 'yellow' },
+	      'yellow'
+	    ),
+	    _react2.default.createElement(
+	      'pre',
+	      null,
+	      _react2.default.createElement(
+	        'code',
+	        null,
+	        '<Button>gray</Button>\n<Button color="blue">blue</Button>\n<Button color="red">red</Button>\n<Button color="yellow">yellow</Button>\n'
+	      )
+	    )
+	  );
+	};
+
+	exports.default = Example;
+
+/***/ },
+/* 4 */
 /***/ function(module, exports) {
 
 	'use strict';
 
-	module.exports = React.createClass({
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var Button = React.createClass({
 	  displayName: 'Button',
 
 	  getDefaultProps: function getDefaultProps() {
@@ -88,56 +158,7 @@
 	  }
 	});
 
-/***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var _button = __webpack_require__(3);
-
-	var _button2 = _interopRequireDefault(_button);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	module.exports = React.createClass({
-	  displayName: "exports",
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "example" },
-	      React.createElement(
-	        _button2.default,
-	        null,
-	        "gray"
-	      ),
-	      React.createElement(
-	        _button2.default,
-	        { color: "blue" },
-	        "blue"
-	      ),
-	      React.createElement(
-	        _button2.default,
-	        { color: "red" },
-	        "red"
-	      ),
-	      React.createElement(
-	        _button2.default,
-	        { color: "yellow" },
-	        "yellow"
-	      ),
-	      React.createElement(
-	        "pre",
-	        null,
-	        React.createElement(
-	          "code",
-	          null,
-	          "<Button>gray</Button>\n<Button color=\"blue\">blue</Button>\n<Button color=\"red\">red</Button>\n<Button color=\"yellow\">yellow</Button>\n"
-	        )
-	      )
-	    );
-	  }
-	});
+	exports.default = Button;
 
 /***/ }
 /******/ ]);
