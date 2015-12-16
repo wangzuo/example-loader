@@ -1,6 +1,6 @@
 {
   "name": "example-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "webpack loader for react example",
   "main": "index.js",
   "directories": {
