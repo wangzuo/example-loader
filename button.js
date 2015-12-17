@@ -1,4 +1,6 @@
-var Button = React.createClass({
+var React = require('react');
+
+module.exports = React.createClass({
   displayName: 'Button',
 
   getDefaultProps() {
@@ -9,9 +11,9 @@ var Button = React.createClass({
 
   render() {
     return (
-      <button className={`btn-${this.props.color}`}>{this.props.children}</button>
+      <button className={`btn-${this.props.color}`}>
+        {this.props.children}
+      </button>
     );
   }
 });
-
-export default Button
