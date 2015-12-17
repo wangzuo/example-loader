@@ -1,6 +1,6 @@
 # example-loader
 
-webpack loader for react-example
+webpack loader for react example
 
 ### Installation
 ``` sh
@@ -34,7 +34,7 @@ require('./button.example')
 import React from 'react';
 import Button from './button';
 
-const Example = () => (
+module.exports = () => (
   <div className="example">
     <Button>gray</Button>
 <Button color="blue">blue</Button>
@@ -52,8 +52,6 @@ const Example = () => (
     </pre>
   </div>
 );
-
-export default Example
 ```
 
 ### License
