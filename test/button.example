@@ -1,4 +1,8 @@
-<Button>gray</Button>
-<Button color="blue">blue</Button>
-<Button color="red">red</Button>
-<Button color="yellow">yellow</Button>
+<Row>
+  <Col col={10}>
+    <Button>gray</Button>
+    <Button color="blue">blue</Button>
+    <Button color="red">red</Button>
+    <Button color="yellow">yellow</Button>
+  </Col>
+</Row>

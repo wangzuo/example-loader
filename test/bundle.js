@@ -78,6 +78,8 @@
 
 	var _button2 = _interopRequireDefault(_button);
 
+	var _grid = __webpack_require__(5);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = function () {
@@ -85,24 +87,32 @@
 	    'div',
 	    { className: 'example' },
 	    _react2.default.createElement(
-	      _button2.default,
+	      _grid.Row,
 	      null,
-	      'gray'
-	    ),
-	    _react2.default.createElement(
-	      _button2.default,
-	      { color: 'blue' },
-	      'blue'
-	    ),
-	    _react2.default.createElement(
-	      _button2.default,
-	      { color: 'red' },
-	      'red'
-	    ),
-	    _react2.default.createElement(
-	      _button2.default,
-	      { color: 'yellow' },
-	      'yellow'
+	      _react2.default.createElement(
+	        _grid.Col,
+	        { col: 10 },
+	        _react2.default.createElement(
+	          _button2.default,
+	          null,
+	          'gray'
+	        ),
+	        _react2.default.createElement(
+	          _button2.default,
+	          { color: 'blue' },
+	          'blue'
+	        ),
+	        _react2.default.createElement(
+	          _button2.default,
+	          { color: 'red' },
+	          'red'
+	        ),
+	        _react2.default.createElement(
+	          _button2.default,
+	          { color: 'yellow' },
+	          'yellow'
+	        )
+	      )
 	    ),
 	    _react2.default.createElement(
 	      'pre',
@@ -110,7 +120,7 @@
 	      _react2.default.createElement(
 	        'code',
 	        null,
-	        '<Button>gray</Button>\n<Button color="blue">blue</Button>\n<Button color="red">red</Button>\n<Button color="yellow">yellow</Button>\n'
+	        '<Row>\n  <Col col={10}>\n    <Button>gray</Button>\n    <Button color="blue">blue</Button>\n    <Button color="red">red</Button>\n    <Button color="yellow">yellow</Button>\n  </Col>\n</Row>\n'
 	      )
 	    )
 	  );
@@ -140,6 +150,28 @@
 	    );
 	  }
 	});
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	exports.Row = function (props) {
+	  return React.createElement(
+	    "div",
+	    { className: "row" },
+	    props.children
+	  );
+	};
+
+	exports.Col = function (props) {
+	  return React.createElement(
+	    "div",
+	    { className: "col col-" + props.col },
+	    props.children
+	  );
+	};
 
 /***/ }
 /******/ ]);

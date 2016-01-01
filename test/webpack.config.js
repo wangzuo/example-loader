@@ -15,6 +15,7 @@ module.exports = {
     'react-dom': 'ReactDOM'
   },
   example: {
-    'Button': './button'
+    'Button': './button',
+    'Row, Col': './grid'
   }
 };
