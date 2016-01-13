@@ -17,36 +17,51 @@ module: {
   ]
 },
 example: {
-  'Button': './button'
+  'Button': './button',
+  'Row, Col': './grid'
 }
 ```
 
 
 button.example
 ``` javascript
-<Button color="blue">blue</Button>
-<Button color="red">red</Button>
-<Button color="yellow">yellow</Button>
+<Row>
+  <Col col={10}>
+    <Button>gray</Button>
+    <Button color="blue">blue</Button>
+    <Button color="red">red</Button>
+    <Button color="yellow">yellow</Button>
+  </Col>
+</Row>
 ```
 
 require('./button.example')
 ``` javascript
 import React from 'react';
 import Button from './button';
+import {Row, Col} from './grid';
 
 module.exports = () => (
   <div className="example">
+    <Row>
+  <Col col={10}>
     <Button>gray</Button>
-<Button color="blue">blue</Button>
-<Button color="red">red</Button>
-<Button color="yellow">yellow</Button>
+    <Button color="blue">blue</Button>
+    <Button color="red">red</Button>
+    <Button color="yellow">yellow</Button>
+  </Col>
+</Row>
 
     <pre>
       <code>
-        {`<Button>gray</Button>
-<Button color="blue">blue</Button>
-<Button color="red">red</Button>
-<Button color="yellow">yellow</Button>
+        {`<Row>
+  <Col col={10}>
+    <Button>gray</Button>
+    <Button color="blue">blue</Button>
+    <Button color="red">red</Button>
+    <Button color="yellow">yellow</Button>
+  </Col>
+</Row>
 `}
       </code>
     </pre>
