@@ -11,17 +11,24 @@ npm install example-loader -D
 ``` javascript
 // webpack.config.js
 module: {
-  loaders: [
-    { test: /\.js$/, loader:  'babel-loader' },
-    { test: /\.example$/, loader:  'babel-loader!../lib/loader' }
+  rules: [
+    { test: /\.js$/, loader: 'babel-loader' },
+    { test: /\.example$/, loader: 'babel-loader!../lib/loader' }
   ]
 },
-example: {
-  imports: {
-    Button: './button',
-    'Row, Col': './grid'
-  }
-}
+plugins: [
+  new webpack.LoaderOptionsPlugin({
+    test: /\.example$/,
+    options: {
+      example: {
+        imports: {
+          Button: './button',
+          'Row, Col': './grid'
+        }
+      }
+    }
+  })
+]
 ```
 
 
