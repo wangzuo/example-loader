@@ -1,19 +1,13 @@
-var React = require('react');
+import React from 'react';
 
-module.exports = React.createClass({
-  displayName: 'Button',
+const Button = ({ color, children }) => (
+  <button className={`btn-${color}`}>
+    {children}
+  </button>
+);
 
-  getDefaultProps() {
-    return {
-      color: 'gray'
-    };
-  },
+Button.defaultProps = {
+  color: 'gray'
+};
 
-  render() {
-    return (
-      <button className={`btn-${this.props.color}`}>
-        {this.props.children}
-      </button>
-    );
-  }
-});
+export default Button;
