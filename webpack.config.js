@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry: './app.js',
   output: {
@@ -5,7 +7,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.js$/, loader: 'babel-loader' },
       { test: /\.example$/, loader: 'babel-loader!../lib/loader' }
     ]
@@ -14,13 +16,18 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM'
   },
-  example: {
-    imports: {
-      Button: './button',
-      'Row, Col': './grid'
-    },
-    highlighter: {
-      style: 'rainbow'
-    }
-  }
+
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      test: /\.example$/,
+      options: {
+        example: {
+          imports: {
+            Button: './button',
+            'Row, Col': './grid'
+          }
+        }
+      }
+    })
+  ]
 };
