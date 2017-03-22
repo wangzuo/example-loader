@@ -150,24 +150,31 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-
-	module.exports = React.createClass({
-	  displayName: 'Button',
-
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      color: 'gray'
-	    };
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      'button',
-	      { className: 'btn-' + this.props.color },
-	      this.props.children
-	    );
-	  }
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Button = function Button(_ref) {
+	  var color = _ref.color,
+	      children = _ref.children;
+	  return _react2.default.createElement(
+	    'button',
+	    { className: 'btn-' + color },
+	    children
+	  );
+	};
+
+	Button.defaultProps = {
+	  color: 'gray'
+	};
+
+	exports.default = Button;
 
 /***/ },
 /* 5 */
