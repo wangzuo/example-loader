@@ -1,6 +1,6 @@
 # example-loader
 
-webpack loader for react example
+webpack loader for (react) example
 
 ### Installation
 ``` sh
@@ -17,8 +17,10 @@ module: {
   ]
 },
 example: {
-  'Button': './button',
-  'Row, Col': './grid'
+  imports: {
+    Button: './button',
+    'Row, Col': './grid'
+  }
 }
 ```
 

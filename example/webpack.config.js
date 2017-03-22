@@ -18,9 +18,6 @@ module.exports = {
     imports: {
       Button: './button',
       'Row, Col': './grid'
-    },
-    highlighter: {
-      style: 'rainbow'
     }
   }
 };
