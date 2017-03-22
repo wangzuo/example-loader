@@ -30,5 +30,8 @@
     "babel-preset-react": "^6.3.13",
     "github-pages-deploy": "0.0.3",
     "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "react-syntax-highlighter": "^5.1.2"
   }
 }
