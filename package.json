@@ -3,15 +3,12 @@
   "version": "0.1.0",
   "description": "webpack loader for react example",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "deploy": "github-pages-deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "github-pages-deploy": {
-    "src": "test"
+    "src": "example"
   },
   "repository": {
     "type": "git",
