@@ -1,11 +1,13 @@
-exports.Row = (props) => (
+import React from 'react';
+
+export const Row = ({ col, children }) => (
   <div className="row">
-    {props.children}
+    {children}
   </div>
 );
 
-exports.Col= (props) => (
-  <div className={`col col-${props.col}`}>
-    {props.children}
+export const Col = ({ col, children }) => (
+  <div className={`col col-${col}`}>
+    {children}
   </div>
 );

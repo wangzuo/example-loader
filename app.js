@@ -1,5 +1,13 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ButtonExample = require('./button.example');
+import React from 'react';
+import { render } from 'react-dom';
+import ButtonExample, { Code } from './button.example';
 
-ReactDOM.render(<ButtonExample/>, document.getElementById('app'));
+const App = () => (
+  <div>
+    <h1>Example Loader</h1>
+    <ButtonExample />
+    <Code />
+  </div>
+);
+
+render(<App />, document.getElementById('app'));

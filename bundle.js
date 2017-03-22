@@ -46,11 +46,33 @@
 
 	'use strict';
 
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(2);
-	var ButtonExample = __webpack_require__(3);
+	var _react = __webpack_require__(1);
 
-	ReactDOM.render(React.createElement(ButtonExample, null), document.getElementById('app'));
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _button = __webpack_require__(3);
+
+	var _button2 = _interopRequireDefault(_button);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var App = function App() {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      'Example Loader'
+	    ),
+	    _react2.default.createElement(_button2.default, null),
+	    _react2.default.createElement(_button.Code, null)
+	  );
+	};
+
+	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -70,6 +92,11 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Code = undefined;
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -82,45 +109,36 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	module.exports = function () {
+	var Code = exports.Code = function Code() {
+	  return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: '<pre style="display:block;overflow-x:auto;padding:0.5em;color:#000;background:#f8f8ff;"><code>&lt;Row&gt;\n  <span><span style="color:#000080;font-weight:normal;">&lt;<span style="color:#000080;font-weight:normal;">Col</span> <span>col</span>=<span style="color:#219161;">{10}</span>&gt;</span>\n    </span>&lt;Button&gt;gray&lt;/Button&gt;<span>\n    </span>&lt;Button color=&quot;blue&quot;&gt;blue&lt;/Button&gt;<span>\n    </span>&lt;Button color=&quot;red&quot;&gt;red&lt;/Button&gt;<span>\n    </span>&lt;Button color=&quot;yellow&quot;&gt;yellow&lt;/Button&gt;<span>\n  <span style="color:#000080;font-weight:normal;">&lt;/<span style="color:#000080;font-weight:normal;">Col</span>&gt;</span></span>\n&lt;<span style="color:#b68;">/Row&gt;\n</span></code></pre>' } });
+	};
+
+	exports.default = function () {
 	  return _react2.default.createElement(
-	    'div',
-	    { className: 'example' },
+	    _grid.Row,
+	    null,
 	    _react2.default.createElement(
-	      _grid.Row,
-	      null,
+	      _grid.Col,
+	      { col: 10 },
 	      _react2.default.createElement(
-	        _grid.Col,
-	        { col: 10 },
-	        _react2.default.createElement(
-	          _button2.default,
-	          null,
-	          'gray'
-	        ),
-	        _react2.default.createElement(
-	          _button2.default,
-	          { color: 'blue' },
-	          'blue'
-	        ),
-	        _react2.default.createElement(
-	          _button2.default,
-	          { color: 'red' },
-	          'red'
-	        ),
-	        _react2.default.createElement(
-	          _button2.default,
-	          { color: 'yellow' },
-	          'yellow'
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'pre',
-	      null,
-	      _react2.default.createElement(
-	        'code',
+	        _button2.default,
 	        null,
-	        '<Row>\n  <Col col={10}>\n    <Button>gray</Button>\n    <Button color="blue">blue</Button>\n    <Button color="red">red</Button>\n    <Button color="yellow">yellow</Button>\n  </Col>\n</Row>\n'
+	        'gray'
+	      ),
+	      _react2.default.createElement(
+	        _button2.default,
+	        { color: 'blue' },
+	        'blue'
+	      ),
+	      _react2.default.createElement(
+	        _button2.default,
+	        { color: 'red' },
+	        'red'
+	      ),
+	      _react2.default.createElement(
+	        _button2.default,
+	        { color: 'yellow' },
+	        'yellow'
 	      )
 	    )
 	  );
@@ -153,23 +171,38 @@
 
 /***/ },
 /* 5 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	exports.Row = function (props) {
-	  return React.createElement(
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Col = exports.Row = undefined;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Row = exports.Row = function Row(_ref) {
+	  var col = _ref.col,
+	      children = _ref.children;
+	  return _react2.default.createElement(
 	    "div",
 	    { className: "row" },
-	    props.children
+	    children
 	  );
 	};
 
-	exports.Col = function (props) {
-	  return React.createElement(
+	var Col = exports.Col = function Col(_ref2) {
+	  var col = _ref2.col,
+	      children = _ref2.children;
+	  return _react2.default.createElement(
 	    "div",
-	    { className: "col col-" + props.col },
-	    props.children
+	    { className: "col col-" + col },
+	    children
 	  );
 	};
 
