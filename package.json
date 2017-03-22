@@ -29,6 +29,6 @@
     "webpack": "^1.12.9"
   },
   "dependencies": {
-    "react-syntax-highlighter": "^5.1.2"
+    "prismjs": "^1.6.0"
   }
 }

@@ -15,7 +15,12 @@ module.exports = {
     'react-dom': 'ReactDOM'
   },
   example: {
-    Button: './button',
-    'Row, Col': './grid'
+    imports: {
+      Button: './button',
+      'Row, Col': './grid'
+    },
+    highlighter: {
+      style: 'rainbow'
+    }
   }
 };
