@@ -88,21 +88,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _grid = __webpack_require__(5);
+
 var _button = __webpack_require__(4);
 
 var _button2 = _interopRequireDefault(_button);
 
-var _grid = __webpack_require__(5);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Code = exports.Code = function Code() {
-  return _react2.default.createElement(
-    'pre',
-    { className: 'language-javascript' },
-    _react2.default.createElement('code', { className: 'language-javascript', dangerouslySetInnerHTML: { __html: '<span class="token operator">&lt;</span>Row<span class="token operator">></span>\n  <span class="token operator">&lt;</span>Col col<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token operator">></span>\n    <span class="token operator">&lt;</span>Button<span class="token operator">></span>gray<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n    <span class="token operator">&lt;</span>Button color<span class="token operator">=</span><span class="token string">"blue"</span><span class="token operator">></span>blue<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n    <span class="token operator">&lt;</span>Button color<span class="token operator">=</span><span class="token string">"red"</span><span class="token operator">></span>red<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n    <span class="token operator">&lt;</span>Button color<span class="token operator">=</span><span class="token string">"yellow"</span><span class="token operator">></span>yellow<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n  <span class="token operator">&lt;</span><span class="token operator">/</span>Col<span class="token operator">></span>\n<span class="token operator">&lt;</span><span class="token operator">/</span>Row<span class="token operator">></span>\n' } })
-  );
-};
 
 exports.default = function () {
   return _react2.default.createElement(
@@ -132,6 +124,14 @@ exports.default = function () {
         'yellow'
       )
     )
+  );
+};
+
+var Code = exports.Code = function Code() {
+  return _react2.default.createElement(
+    'pre',
+    { className: 'language-javascript' },
+    _react2.default.createElement('code', { className: 'language-javascript', dangerouslySetInnerHTML: { __html: '<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">\'react\'</span><span class="token punctuation">;</span>\n<span class="token keyword">import</span> <span class="token punctuation">{</span> Row<span class="token punctuation">,</span> Col <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">\'./grid\'</span><span class="token punctuation">;</span>\n<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">\'./button\'</span><span class="token punctuation">;</span>\n\n<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>\n  <span class="token operator">&lt;</span>Row<span class="token operator">></span>\n    <span class="token operator">&lt;</span>Col col<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token operator">></span>\n      <span class="token operator">&lt;</span>Button<span class="token operator">></span>gray<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n      <span class="token operator">&lt;</span>Button color<span class="token operator">=</span><span class="token string">"blue"</span><span class="token operator">></span>blue<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n      <span class="token operator">&lt;</span>Button color<span class="token operator">=</span><span class="token string">"red"</span><span class="token operator">></span>red<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n      <span class="token operator">&lt;</span>Button color<span class="token operator">=</span><span class="token string">"yellow"</span><span class="token operator">></span>yellow<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>\n    <span class="token operator">&lt;</span><span class="token operator">/</span>Col<span class="token operator">></span>\n  <span class="token operator">&lt;</span><span class="token operator">/</span>Row<span class="token operator">></span>\n<span class="token punctuation">)</span><span class="token punctuation">;</span>\n' } })
   );
 };
 
