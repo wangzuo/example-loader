@@ -14,13 +14,13 @@ check [example](https://github.com/wangzuo/example-loader/tree/master/example) f
 // webpack.config.js
 module: {
   rules: [
-    { test: /\.example$/, loader: 'babel-loader!example-loader' },
+    { test: /\.example.js$/, loader: 'example-loader', enforce: 'pre' },
     { test: /\.js$/, loader: 'babel-loader' }
   ]
 }
 ```
 
-button.example
+button.example.js
 ``` javascript
 import React from 'react';
 import { Row, Col } from './grid';

@@ -6,7 +6,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.example$/, loader: 'babel-loader!../lib/loader' },
+      { test: /\.example.js$/, loader: '../lib/loader', enforce: 'pre' },
       { test: /\.js$/, loader: 'babel-loader' }
     ]
   },
